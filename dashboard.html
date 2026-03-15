@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard - AshBlog</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="dashboard-page">
+    <div class="header">
+        <div class="header-content">
+            <div class="logo">✨ AshBlog</div>
+            <div class="user-section">
+                <span class="user-welcome" id="userWelcome"></span>
+                <button class="btn new-post-btn" onclick="toggleEditor()">✨ New Post</button>
+                <button class="btn logout-btn" onclick="logout()">Exit</button>
+            </div>
+        </div>
+    </div>
+    <div class="main-container">
+        <div class="sidebar">
+            <div class="profile-stats">
+                <div class="profile-avatar" id="avatar">A</div>
+                <div class="blog-name" id="blogName">Your Blog</div>
+                <div class="stat-item">
+                    <span class="stat-number" id="postCount">0</span>
+                    <span>Posts</span>
+                </div>
+                <div class="stat-item">
+                <span class="stat-number" id="totalViews">0</span>
+                <span>Views</span>
+               </div>
+
+            </div>
+        </div>
+        <div class="main-content">
+            <div class="editor" id="editor">
+                <h3>✨ Create New Post</h3>
+                <input type="text" id="postTitle" placeholder="Enter an attractive title...">
+                <textarea id="postContent" placeholder="Start writing your amazing content here..."></textarea>
+                <div class="editor-buttons">
+                    <button class="btn cancel-btn" onclick="toggleEditor()">Cancel</button>
+                    <button class="btn publish-btn" id="publishBtn">🚀 Publish Now</button>
+                </div>
+            </div>
+            <div class="posts-grid" id="postsGrid">
+                <div class="empty-state">
+                    <div class="empty-icon">✨</div>
+                    <h2>No posts yet!</h2>
+                    <p>Create your first masterpiece and watch it shine ✨</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
